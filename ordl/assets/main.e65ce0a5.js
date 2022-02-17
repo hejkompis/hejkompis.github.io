@@ -420,8 +420,8 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
     var ls = document.createElement("template");
     ls.innerHTML = '\n  <div class="spacer"></div>\n';
     var ds = [
-            ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p"],
-            ["-", "a", "s", "d", "f", "g", "h", "j", "k", "l", "-"],
+            ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "å"],
+            ["-", "a", "s", "d", "f", "g", "h", "j", "k", "l", "ö", "ä"],
             ["↵", "z", "x", "c", "v", "b", "n", "m", "←"]
         ],
         us = function(e) { r(t, e); var a = h(t);
@@ -433,7 +433,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
                                 o = a.ctrlKey;
                             t || o || (Ba.includes(s.toLowerCase()) || "Backspace" === s || "Enter" === s) && e.dispatchKeyPressEvent(s) } })), this.$keyboard.addEventListener("transitionend", (function(a) { var s = a.target.closest("button");
                         s && e.$keyboard.contains(s) && s.classList.remove("fade") })), ds.forEach((function(a) { var s = document.createElement("div");
-                        s.classList.add("row"), a.forEach((function(e) { var a; if (e >= "a" && e <= "z" || "←" === e || "↵" === e) { if ((a = is.content.cloneNode(!0).firstElementChild).dataset.key = e, a.textContent = e, "←" === e) { var t = document.createElement("game-icon");
+                        s.classList.add("row"), a.forEach((function(e) { var a; if (e >= "a" && e <= "ö" || "←" === e || "↵" === e) { if ((a = is.content.cloneNode(!0).firstElementChild).dataset.key = e, a.textContent = e, "←" === e) { var t = document.createElement("game-icon");
                                     t.setAttribute("icon", "backspace"), a.textContent = "", a.appendChild(t), a.classList.add("one-and-a-half") } "↵" == e && (a.textContent = "enter", a.classList.add("one-and-a-half")) } else(a = ls.content.cloneNode(!0).firstElementChild).classList.add(1 === e.length ? "half" : "one");
                             s.appendChild(a) })), e.$keyboard.appendChild(s) })), this._render() } }, { key: "_render", value: function() { for (var e in this._letterEvaluations) { var a = this.$keyboard.querySelector('[data-key="'.concat(e, '"]'));
                         a.dataset.state = this._letterEvaluations[e], a.classList.add("fade") } } }]), t }(c(HTMLElement));
@@ -579,7 +579,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
             function t() { var e; return s(this, t), (e = a.call(this)).attachShadow({ mode: "open" }), e } return o(t, [{ key: "connectedCallback", value: function() { this.shadowRoot.appendChild(Gs.content.cloneNode(!0)); var e = this.getAttribute("icon");
                     this.shadowRoot.querySelector("path").setAttribute("d", Bs[e]), "backspace" === e && this.shadowRoot.querySelector("path").setAttribute("fill", "var(--color-tone-1)"), "share" === e && this.shadowRoot.querySelector("path").setAttribute("fill", "var(--white)") } }]), t }(c(HTMLElement));
     customElements.define("game-icon", Fs);
-    var Ws = document.createElement("template");
+    var Ws = document.createElement("template")
     Ws.innerHTML = '\n  <div id="timer"></div>\n';
     var Ys = 6e4,
         Js = 36e5,
