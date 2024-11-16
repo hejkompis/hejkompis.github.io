@@ -365,7 +365,7 @@ this.wordle = this.wordle || {}, this.wordle.bundle = function(e) {
     var Za = "IN_PROGRESS",
         es = "WIN",
         as = "FAIL",
-        ss = ["Genius", "Magnificent", "Impressive", "Splendid", "Great", "Phew"],
+        ss = ["", "JÄVVLAR MAGI", "Röva va grym du ä", "Gött mos", "Dugerla", "Jävvlar va nära"],
         ts = function(e) { r(t, e); var a = h(t);
 
             function t() { var e;
